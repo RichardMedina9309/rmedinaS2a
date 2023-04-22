@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="rmedinaS2a.Notas">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Notas U Israel" FontAttributes="Bold" FontSize="40" HorizontalTextAlignment="Center" BackgroundColor="WhiteSmoke" TextColor="DarkBlue"/>
+                <Entry x:Name="txtNombre" Placeholder="Ingresar nombre del estudiante"/>
+            <Button x:Name="btnNombre" Text="Ingresar" Clicked="btnNombre_Clicked" />
+            
+            <!--Ingresar notas del primer parcial-->
+            <!--primer parcial deberes-->
+                <Label Text="Primer parcial" FontAttributes="Bold" FontSize="32" HorizontalTextAlignment="Start" BackgroundColor="WhiteSmoke" TextColor="DarkBlue"/>
+                <Grid BackgroundColor="FloralWhite" RowSpacing="40" ColumnSpacing="40">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Notas deberes" FontAttributes="Bold" FontSize="22" HorizontalTextAlignment="Start" BackgroundColor="WhiteSmoke" TextColor="DarkBlue" Grid.Row="0" Grid.Column="0"/>
+
+                    <!--Ingreso nota de seguimiento-->
+                    <Label Text="Semana 1" FontAttributes="Bold" FontSize="18" HorizontalOptions="Start" Grid.Row="1" Grid.Column="0"/>
+                    <Entry x:Name="txtDeber1" Placeholder="Ingresar nota" Keyboard="Numeric" Grid.Row="2" Grid.Column="0" TextChanged="txtDeber1_TextChanged"/>
+
+                    <Label Text="Semana 2" FontAttributes="Bold" FontSize="18" HorizontalOptions="Start" Grid.Row="3" Grid.Column="0"/>
+                    <Entry x:Name="txtDeber2" Placeholder="Ingresar nota" Keyboard="Numeric" Grid.Row="4" Grid.Column="0" TextChanged="txtDeber2_TextChanged"/>
+
+                    <Label Text="Semana 3" FontAttributes="Bold" FontSize="18" HorizontalOptions="Start" Grid.Row="5" Grid.Column="0"/>
+                    <Entry x:Name="txtDeber3" Placeholder="Ingresar nota" Keyboard="Numeric" Grid.Row="6" Grid.Column="0" TextChanged="txtDeber3_TextChanged"/>
+
+                    <Entry x:Name="txtPromedioDeberes" Placeholder="Promedio Deberes" IsReadOnly="True" Grid.Row="7" Grid.Column="0"/>
+
+                    <Button x:Name="btnPromedioDeberes" Text="Promedio Deberes" Clicked="btnPromedioDeberes_Clicked" Grid.Row="8" Grid.Column="0"/>
+
+                    <!--Primer parcial examen-->
+                    <Label Text="Nota examen" FontAttributes="Bold" FontSize="22" HorizontalTextAlignment="Start" BackgroundColor="WhiteSmoke" TextColor="DarkBlue" Grid.Row="0" Grid.Column="1"/>
+
+                    <Label Text="Parcial 1" FontAttributes="Bold" FontSize="18" HorizontalOptions="Start" Grid.Row="1" Grid.Column="1"/>
+                    <Entry x:Name="txtExamen1" Placeholder="Ingresar nota" Keyboard="Numeric" Grid.Row="2" Grid.Column="1" TextChanged="txtExamen1_TextChanged"/>
+
+                </Grid>
+
+                <!--Promedio deberes y examen sobre 5-->
+                <Label Text="Promedio primer parcial" FontAttributes="Bold" FontSize="18" HorizontalTextAlignment="Start" BackgroundColor="WhiteSmoke"/>
+                <Entry x:Name="txtPromedioNotas1" Placeholder="Promedio" Keyboard="Numeric"/>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button x:Name="btnPromedioParcialUno" Text="Primer Parcial" Clicked="btnPromedioParcialUno_Clicked" Grid.Row="0" Grid.Column="0"/>
+                    <Button x:Name="btnLimpiarDeberes" Text="Limpiar" Clicked="btnLimpiarDeberes_Clicked" Grid.Row="0" Grid.Column="1"/>
+                </Grid>
+
+
+
+            <!--Ingresar notas del primer parcial-->
+            <!--segundo parcial deberes-->
+                <Label Text="Segundo parcial" FontAttributes="Bold" FontSize="32" HorizontalTextAlignment="Start" BackgroundColor="WhiteSmoke" TextColor="DarkBlue"/>
+                <Grid BackgroundColor="FloralWhite" RowSpacing="40" ColumnSpacing="40">
+                  <Grid.RowDefinitions>
+                      <RowDefinition/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                  <Grid.ColumnDefinitions>
+                      <ColumnDefinition/>
+                      <ColumnDefinition/>
+                  </Grid.ColumnDefinitions>
+
+                    <Label Text="Notas deberes" FontAttributes="Bold" FontSize="22" HorizontalTextAlignment="Start" BackgroundColor="WhiteSmoke" TextColor="DarkBlue" Grid.Row="0" Grid.Column="0"/>
+
+                    <!--Ingreso nota de seguimiento-->
+                    <Label Text="Semana 5" FontAttributes="Bold" FontSize="18" HorizontalOptions="Start" Grid.Row="1" Grid.Column="0" />
+                    <Entry x:Name="txtDeber5" Placeholder="Ingresar nota" Keyboard="Numeric" Grid.Row="2" Grid.Column="0" TextChanged="txtDeber5_TextChanged"/>
+
+                    <Label Text="Semana 6" FontAttributes="Bold" FontSize="18" HorizontalOptions="Start" Grid.Row="3" Grid.Column="0"/>
+                    <Entry x:Name="txtDeber6" Placeholder="Ingresar nota" Keyboard="Numeric" Grid.Row="4" Grid.Column="0" TextChanged="txtDeber6_TextChanged"/>
+
+                    <Label Text="Semana 7" FontAttributes="Bold" FontSize="18" HorizontalOptions="Start" Grid.Row="5" Grid.Column="0"/>
+                    <Entry x:Name="txtDeber7" Placeholder="Ingresar nota" Keyboard="Numeric" Grid.Row="6" Grid.Column="0" TextChanged="txtDeber7_TextChanged"/>
+
+                    <Entry x:Name="txtPromedioDeberes2" Placeholder="Promedio Deberes" IsReadOnly="True" Grid.Row="7" Grid.Column="0"/>
+
+                    <Button x:Name="btnPromedioDeberes2" Text="Promedio Deberes" Clicked="btnPromedioDeberes2_Clicked" Grid.Row="8" Grid.Column="0"/>
+
+                    <!--Segundo parcial examen-->
+                    <Label Text="Nota examen" FontAttributes="Bold" FontSize="22" HorizontalTextAlignment="Start" BackgroundColor="WhiteSmoke" TextColor="DarkBlue" Grid.Row="0" Grid.Column="1"/>
+
+                    <Label Text="Parcial 2" FontAttributes="Bold" FontSize="18" HorizontalOptions="Start" Grid.Row="1" Grid.Column="1"/>
+                    <Entry x:Name="txtExamen2" Placeholder="Ingresar nota" Keyboard="Numeric" Grid.Row="2" Grid.Column="1" TextChanged="txtExamen2_TextChanged" />
+                </Grid>
+
+
+                <!--Promedio deberes y examen sobre 5-->
+
+                <Label Text="Promedio segundo parcial" FontAttributes="Bold" FontSize="18" HorizontalTextAlignment="Start" BackgroundColor="WhiteSmoke"/>
+                <Entry x:Name="txtPromedioNotas2" Placeholder="Promedio" Keyboard="Numeric"/>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button x:Name="btnPromedioParcialDos" Text="Segundo Parcial" Clicked="btnPromedioParcialDos_Clicked" Grid.Row="0" Grid.Column="0"/>
+                    <Button x:Name="btnLimpiarDeberes2" Text="Limpiar" Clicked="btnLimpiarDeberes2_Clicked" Grid.Row="0" Grid.Column="1"/>
+                </Grid>
+                
+                <!--Promedio total-->
+                <Label Text="Promedio total" FontAttributes="Bold" FontSize="32" HorizontalTextAlignment="Start" BackgroundColor="WhiteSmoke" TextColor="DarkBlue"/>
+                <Label Text="Su nota final es: " FontAttributes="Bold" FontSize="18" HorizontalTextAlignment="Start" BackgroundColor="WhiteSmoke"/>
+                <Entry x:Name="txtNotaFinal" Placeholder="Nota Final" Keyboard="Numeric" />
+
+                <Button x:Name="btnNotaFinal" Text="Calcular" Clicked="btnNotaFinal_Clicked"/>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
